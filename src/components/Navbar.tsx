@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="md:mx-20">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -26,30 +26,31 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-serif font-semibold text-xl"
             >
               <li>
-                <Link href={"/addcontacts"}>Add Contacts</Link>
+                <Link href="/addcontacts">Add Contacts</Link>
               </li>
               <li>
-                <Link href={"/allcontacts"}>All Contacts</Link>
+                <Link href="/allcontacts">All Contacts</Link>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">CMA</a>
+          <h1>
+            <Link href="/">
+              <h1 className="text-3xl font-serif font-semibold">CMA</h1>
+            </Link>
+          </h1>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+        <div className="navbar-center hidden lg:flex ">
+          <ul className="menu menu-horizontal px-1 font-serif font-semibold text-xl">
             <li>
-              <Link href={"/addcontacts"}>Add Contacts</Link>
+              <Link href="/addcontacts">Add Contacts</Link>
             </li>
             <li>
-              <Link href={"/allcontacts"}>All Contacts</Link>
+              <Link href="/allcontacts">All Contacts</Link>
             </li>
           </ul>
-        </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
         </div>
       </div>
     </div>
