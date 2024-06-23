@@ -128,12 +128,12 @@ const ContactCard = ({ contact }: { contact: TContact }) => {
               {contact?.isFavourite ? (
                 <FaStar
                   onClick={() => handleFavoriteFalse(contact?._id)}
-                  className="size-7 text-yellow-500"
+                  className="size-7 text-yellow-500 cursor-pointer"
                 />
               ) : (
                 <FaRegStar
                   onClick={() => handleFavoriteTrue(contact?._id)}
-                  className="size-7"
+                  className="size-7 cursor-pointer"
                 />
               )}
             </div>
